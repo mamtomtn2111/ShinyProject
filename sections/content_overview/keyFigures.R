@@ -34,8 +34,8 @@ key_figures <- reactive({
 output$valueBox_confirmed <- renderValueBox({
   valueBox(
     key_figures()$confirmed,
-    subtitle = "Confirmed",
-    icon     = icon("file-medical"),
+    subtitle = "Ca nhiễm",
+    icon     = icon("lungs-virus"),
     color    = "light-blue",
     width    = NULL
   )
@@ -45,27 +45,27 @@ output$valueBox_confirmed <- renderValueBox({
 output$valueBox_recovered <- renderValueBox({
   valueBox(
     key_figures()$recovered,
-    subtitle = "Estimated Recoveries",
-    icon     = icon("heart"),
-    color    = "light-blue"
+    subtitle = "Ca hồi phục (Dự kiến)",
+    icon     = icon("heartbeat"),
+    color    = "green"
   )
 })
 
 output$valueBox_deceased <- renderValueBox({
   valueBox(
     key_figures()$deceased,
-    subtitle = "Deceased",
-    icon     = icon("heartbeat"),
-    color    = "light-blue"
+    subtitle = "Tử vong",
+    icon     = icon("skull"),
+    color    = "red"
   )
 })
 
 output$valueBox_countries <- renderValueBox({
   valueBox(
     key_figures()$countries,
-    subtitle = "Affected Countries",
-    icon     = icon("flag"),
-    color    = "light-blue"
+    subtitle = "Quốc gia nhiễm bệnh",
+    icon     = icon("globe"),
+    color    = "aqua"
   )
 })
 

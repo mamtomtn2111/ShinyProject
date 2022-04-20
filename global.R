@@ -7,8 +7,9 @@ library("plotly")
 library("DT")
 library("fs")
 library("wbstats")
-
+library("crypto")
 source("utils.R", local = T)
+Sys.setlocale("LC_ALL", "en_US.UTF-8") 
 
 downloadGithubData <- function() {
   download.file(
@@ -24,7 +25,6 @@ downloadGithubData <- function() {
     junkpaths = T
   )
 }
-
 
 updateData <- function() {
   # Download data from Johns Hopkins (https://github.com/CSSEGISandData/COVID-19) if the data is older than 0.5h
