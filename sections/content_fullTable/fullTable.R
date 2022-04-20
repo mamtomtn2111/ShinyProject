@@ -5,8 +5,8 @@ getFullTableData <- function(groupBy) {
     pivot_wider(names_from = var, values_from = c(value, value_new)) %>%
     select(-date, -Lat, -Long) %>%
     add_row(
-      "Province/State"      = "World",
-      "Country/Region"      = "World",
+      "Province/State"      = "\u0054\u0068\u1ebf\u0020\u0067\u0069\u1edb\u0069",
+      "Country/Region"      = "\u0054\u0068\u1ebf\u0020\u0067\u0069\u1edb\u0069",
       "population"          = 7800000000,
       "value_confirmed"     = sum(.$value_confirmed, na.rm = T),
       "value_new_confirmed" = sum(.$value_new_confirmed, na.rm = T),
@@ -55,17 +55,17 @@ getFullTableData <- function(groupBy) {
 output$fullTable <- renderDataTable({
   data       <- getFullTableData("Country/Region")
   columNames <- c(
-    "Country",
-    "Total Confirmed",
-    "New Confirmed",
-    "Total Confirmed <br>(per 100k)",
-    "Total Estimated Recoveries",
-    "New Estimated Recoveries",
-    "Total Deceased",
-    "New Deceased",
-    "Total Active",
-    "New Active",
-    "Total Active <br>(per 100k)")
+    "\u0051\u0075\u1ed1\u0063\u0020\u0067\u0069\u0061",
+    "\u0054\u1ed5\u006e\u0067\u0020\u0073\u1ed1\u0020\u0063\u0061\u0020\u006e\u0068\u0069\u1ec5\u006d",
+    "\u0053\u1ed1\u0020\u0063\u0061\u0020\u006e\u0068\u0069\u1ec5\u006d\u0020\u006d\u1edb\u0069",
+    "\u0054\u1ed5\u006e\u0067\u0020\u0073\u1ed1\u0020\u0063\u0061\u0020\u006e\u0068\u0069\u1ec5\u006d <br>(\u006d\u1ed7\u0069 100k)",
+    "\u0054\u1ed5\u006e\u0067\u0020\u0073\u1ed1\u0020\u0063\u0061\u0020\u0068\u1ed3\u0069\u0020\u0070\u0068\u1ee5\u0063\u0020\u0028\u0064\u1ef1\u0020\u0074\u00ed\u006e\u0068\u0029",
+    "\u0053\u1ed1\u0020\u0063\u0061\u0020\u0068\u1ed3\u0069\u0020\u0070\u0068\u1ee5\u0063\u0020\u006d\u1edb\u0069",
+    "\u0053\u1ed1\u0020\u0063\u0061\u0020\u0074\u1eed\u0020\u0076\u006f\u006e\u0067",
+    "\u0053\u1ed1\u0020\u0063\u0061\u0020\u0074\u1eed\u0020\u0076\u006f\u006e\u0067\u0020\u006d\u1edb\u0069",
+    "\u0053\u1ed1\u0020\u0063\u0061\u0020\u0063\u0068\u01b0\u0061\u0020\u006b\u0068\u1ecf\u0069",
+    "\u0053\u1ed1\u0020\u0063\u0061\u0020\u0063\u0068\u01b0\u0061\u0020\u006b\u0068\u1ecf\u0069\u0020\u006d\u1edb\u0069",
+    "\u0054\u1ed5\u006e\u0067\u0020\u0073\u1ed1\u0020\u0063\u0061\u0020\u0063\u0068\u01b0\u0061\u0020\u006b\u0068\u1ecf\u0069 <br>(\u006d\u1ed7\u0069 100k)")
   datatable(
     data,
     rownames  = FALSE,
@@ -101,32 +101,5 @@ output$fullTable <- renderDataTable({
         list(visible = FALSE, targets = 11:14)
       )
     )
-  ) %>%
-    formatStyle(
-      columns    = "Country/Region",
-      fontWeight = "bold"
-    ) %>%
-    formatStyle(
-      columns         = "confirmed_new",
-      valueColumns    = "confirmed_newPer",
-      backgroundColor = styleInterval(c(10, 20, 33, 50, 75), c("NULL", "#FFE5E5", "#FFB2B2", "#FF7F7F", "#FF4C4C", "#983232")),
-      color           = styleInterval(75, c("#000000", "#FFFFFF"))
-    ) %>%
-    formatStyle(
-      columns         = "deceased_new",
-      valueColumns    = "deceased_newPer",
-      backgroundColor = styleInterval(c(10, 20, 33, 50, 75), c("NULL", "#FFE5E5", "#FFB2B2", "#FF7F7F", "#FF4C4C", "#983232")),
-      color           = styleInterval(75, c("#000000", "#FFFFFF"))
-    ) %>%
-    formatStyle(
-      columns         = "active_new",
-      valueColumns    = "active_newPer",
-      backgroundColor = styleInterval(c(-33, -20, -10, 10, 20, 33, 50, 75), c("#66B066", "#99CA99", "#CCE4CC", "NULL", "#FFE5E5", "#FFB2B2", "#FF7F7F", "#FF4C4C", "#983232")),
-      color           = styleInterval(75, c("#000000", "#FFFFFF"))
-    ) %>%
-    formatStyle(
-      columns         = "recovered_new",
-      valueColumns    = "recovered_newPer",
-      backgroundColor = styleInterval(c(10, 20, 33), c("NULL", "#CCE4CC", "#99CA99", "#66B066"))
-    )
+  )
 })

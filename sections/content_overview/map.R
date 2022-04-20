@@ -4,10 +4,10 @@ addLabel <- function(data) {
   data$label <- paste0(
     '<b>', ifelse(is.na(data$`Province/State`), data$`Country/Region`, data$`Province/State`), '</b><br>
     <table style="width:120px;">
-    <tr><td>Confirmed:</td><td align="right">', data$confirmed, '</td></tr>
-    <tr><td>Deceased:</td><td align="right">', data$deceased, '</td></tr>
-    <tr><td>Estimated Recoveries:</td><td align="right">', data$recovered, '</td></tr>
-    <tr><td>Active:</td><td align="right">', data$active, '</td></tr>
+    <tr><td>\u0053\u1ed1\u0020\u0063\u0061\u0020\u006e\u0068\u0069\u1ec5\u006d:</td><td align="right">', data$confirmed, '</td></tr>
+    <tr><td>\u0053\u1ed1\u0020\u0063\u0061\u0020\u0074\u1eed\u0020\u0076\u006f\u006e\u0067:</td><td align="right">', data$deceased, '</td></tr>
+    <tr><td>\u0048\u1ed3\u0069\u0020\u0070\u0068\u1ee5\u0063\u0020\u0028\u01b0\u1edb\u0063\u0020\u0074\u00ed\u006e\u0068\u0029:</td><td align="right">', data$recovered, '</td></tr>
+    <tr><td>\u0043\u0068\u01b0\u0061\u0020\u006b\u0068\u1ecf\u0069\u0020\u0062\u1ec7\u006e\u0068:</td><td align="right">', data$active, '</td></tr>
     </table>'
   )
   data$label <- lapply(data$label, HTML)
@@ -23,9 +23,9 @@ map <- leaflet(addLabel(data_latest)) %>%
   addProviderTiles(providers$HERE.satelliteDay, group = "Satellite") %>%
   addLayersControl(
     baseGroups    = c("Light", "Satellite"),
-    overlayGroups = c("Confirmed", "Confirmed (per capita)", "Estimated Recoveries", "Deceased", "Active", "Active (per capita)")
+    overlayGroups = c("Confirmed", "Confirmed (per capita)", "Estimated Recoveries", "Deceased", "Active", "Active (per capital)")
   ) %>%
-  hideGroup("Confirmed (per capita)") %>%
+  hideGroup("Confirmed (per capital)") %>%
   hideGroup("Estimated Recoveries") %>%
   hideGroup("Deceased") %>%
   hideGroup("Active") %>%

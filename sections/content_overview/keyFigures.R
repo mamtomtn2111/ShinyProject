@@ -34,7 +34,7 @@ key_figures <- reactive({
 output$valueBox_confirmed <- renderValueBox({
   valueBox(
     key_figures()$confirmed,
-    subtitle = "Ca nhiễm",
+    subtitle = "\u0043\u0061\u0020\u006e\u0068\u0069\u1ec5\u006d",
     icon     = icon("lungs-virus"),
     color    = "light-blue",
     width    = NULL
@@ -45,7 +45,7 @@ output$valueBox_confirmed <- renderValueBox({
 output$valueBox_recovered <- renderValueBox({
   valueBox(
     key_figures()$recovered,
-    subtitle = "Ca hồi phục (Dự kiến)",
+    subtitle = "\u0043\u0068\u01b0\u0061\u0020\u006b\u0068\u1ecf\u0069\u0020\u0062\u1ec7\u006e\u0068",
     icon     = icon("heartbeat"),
     color    = "green"
   )
@@ -54,7 +54,7 @@ output$valueBox_recovered <- renderValueBox({
 output$valueBox_deceased <- renderValueBox({
   valueBox(
     key_figures()$deceased,
-    subtitle = "Tử vong",
+    subtitle = "\u0054\u1eed\u0020\u0076\u006f\u006e\u0067",
     icon     = icon("skull"),
     color    = "red"
   )
@@ -63,14 +63,14 @@ output$valueBox_deceased <- renderValueBox({
 output$valueBox_countries <- renderValueBox({
   valueBox(
     key_figures()$countries,
-    subtitle = "Quốc gia nhiễm bệnh",
+    subtitle = "\u0051\u0075\u1ed1\u0063\u0020\u0067\u0069\u0061\u0020\u006e\u0068\u0069\u1ec5\u006d\u0020\u0062\u1ec7\u006e\u0068",
     icon     = icon("globe"),
     color    = "aqua"
   )
 })
 
 output$box_keyFigures <- renderUI(box(
-  title = paste0("Key Figures (", strftime(input$timeSlider, format = "%d.%m.%Y"), ")"),
+  title = paste0("\u0053\u1ed1\u0020\u006c\u0069\u1ec7\u0075 (", strftime(input$timeSlider, format = "%d.%m.%Y"), ")"),
   fluidRow(
     column(
       valueBoxOutput("valueBox_confirmed", width = 3),
@@ -81,6 +81,6 @@ output$box_keyFigures <- renderUI(box(
       style = "margin-left: -20px"
     )
   ),
-  div("Last updated: ", strftime(changed_date, format = "%d.%m.%Y - %R %Z")),
+  div("\u0043\u1ead\u0070\u0020\u006e\u0068\u1ead\u0074\u0020\u006c\u1ea7\u006e\u0020\u0063\u0075\u1ed1\u0069\u003a ", strftime(changed_date, format = "%d.%m.%Y - %R %Z")),
   width = 12
 ))

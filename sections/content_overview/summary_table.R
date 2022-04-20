@@ -1,11 +1,11 @@
 output$summaryTables <- renderUI({
   tabBox(
-    tabPanel("Country/Region",
+    tabPanel("\u0051\u0075\u1ed1\u0063\u0020\u0067\u0069\u0061\u002f\u0020\u006c\u00e3\u006e\u0068\u0020\u0074\u0068\u1ed5",
       div(
         dataTableOutput("summaryDT_country"),
         style = "margin-top: -10px")
     ),
-    tabPanel("Province/State",
+    tabPanel("\u0054\u1ec9\u006e\u0068\u002f\u0020\u0074\u0068\u00e0\u006e\u0068\u0020\u0070\u0068\u1ed1",
       div(
         dataTableOutput("summaryDT_state"),
         style = "margin-top: -10px"
@@ -67,8 +67,14 @@ summariseData <- function(df, groupBy) {
 }
 
 getSummaryDT <- function(data, groupBy, selectable = FALSE) {
+  Setcolnames <- c("\u0051\u0075\u1ed1\u0063\u0020\u0067\u0069\u0061",
+                   "\u0043\u0061\u0020\u006e\u0068\u0069\u1ec5\u006d",
+                   "\u0048\u1ed3\u0069\u0020\u0070\u0068\u1ee5\u0063\u0020\u0028\u01b0\u1edb\u0063\u0020\u0074\u00ed\u006e\u0068\u0029",
+                   "\u0053\u1ed1\u0020\u0063\u0061\u0020\u0074\u1eed\u0020\u0076\u006f\u006e\u0067",
+                   "\u0043\u0068\u01b0\u0061\u0020\u006b\u0068\u1ecf\u0069\u0020\u0062\u1ec7\u006e\u0068")
   datatable(
     na.omit(summariseData(data, groupBy)),
+    colnames = Setcolnames,
     rownames  = FALSE,
     options   = list(
       order          = list(1, "desc"),

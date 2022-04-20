@@ -7,9 +7,7 @@ library("plotly")
 library("DT")
 library("fs")
 library("wbstats")
-library("crypto")
 source("utils.R", local = T)
-Sys.setlocale("LC_ALL", "en_US.UTF-8") 
 
 downloadGithubData <- function() {
   download.file(

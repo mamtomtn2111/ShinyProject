@@ -32,7 +32,7 @@ body_overview <- dashboardBody(
       column(
         sliderInput(
           "timeSlider",
-          label      = "Select date",
+          label      = "\u0043\u0068\u1ecd\u006e\u0020\u006e\u0067\u00e0\u0079",
           min        = min(data_evolution$date),
           max        = max(data_evolution$date),
           value      = max(data_evolution$date),
