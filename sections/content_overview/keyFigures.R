@@ -45,7 +45,7 @@ output$valueBox_confirmed <- renderValueBox({
 output$valueBox_recovered <- renderValueBox({
   valueBox(
     key_figures()$recovered,
-    subtitle = "\u0043\u0068\u01b0\u0061\u0020\u006b\u0068\u1ecf\u0069\u0020\u0062\u1ec7\u006e\u0068",
+    subtitle = "\u0048\u1ed3\u0069\u0020\u0070\u0068\u1ee5\u0063\u0020\u0028\u01b0\u1edb\u0063\u0020\u0074\u00ed\u006e\u0068\u0029",
     icon     = icon("heartbeat"),
     color    = "green"
   )
