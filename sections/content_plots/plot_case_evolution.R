@@ -25,8 +25,8 @@ output$case_evolution <- renderPlotly({
     type  = 'scatter',
     mode  = 'lines') %>%
     layout(
-      yaxis = list(title = "# Cases"),
-      xaxis = list(title = "Date")
+      yaxis = list(title = "\u0053\u1ed1\u0020\u0063\u0061"),
+      xaxis = list(title = "\u004e\u0067\u00e0\u0079")
     )
 
 

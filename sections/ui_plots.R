@@ -20,9 +20,8 @@ body_plots <- dashboardBody(
             width = 3,
           ),
           column(
-            HTML("Note: Active cases are calculated as <i>Confirmed - (Estimated Recoveries + Deceased)</i>. Therefore, <i>new</i> active cases can
-          be negative for some days, if on this day there were more new estimated recoveries + deceased cases than there were new
-          confirmed cases."),
+            HTML("Note: \u0053\u1ed1\u0020\u0063\u0061\u0020\u0063\u0068\u01b0\u0061\u0020\u006b\u0068\u1ecf\u0069\u0020\u0111\u01b0\u1ee3\u0063\u0020\u0074\u00ed\u006e\u0068\u0020\u0062\u1eb1\u006e\u0067\u0020
+            <i>\u0053\u1ed1\u0020\u0063\u0061\u0020\u006e\u0068\u0069\u1ec5\u006d - (\u0053\u1ed1\u0020\u0063\u0061\u0020\u0068\u1ed3\u0069\u0020\u0070\u0068\u1ee5\u0063\u0020\u0028\u01b0\u1edb\u0063\u0020\u0074\u00ed\u006e\u0068\u0029 + \u0053\u1ed1\u0020\u0063\u0061\u0020\u0074\u1eed\u0020\u0076\u006f\u006e\u0067)</i>."),
             width = 7
           ),
           width = 6

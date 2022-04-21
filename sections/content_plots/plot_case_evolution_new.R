@@ -1,7 +1,7 @@
 output$selectize_casesByCountries_new <- renderUI({
   selectizeInput(
     "selectize_casesByCountries_new",
-    label    = "Select Country",
+    label    = "\u0043\u0068\u1ecd\u006e\u0020\u0071\u0075\u1ed1\u0063\u0020\u0067\u0069\u0061",
     choices  = c("All", unique(data_evolution$`Country/Region`)),
     selected = "All"
   )
@@ -23,7 +23,7 @@ output$case_evolution_new <- renderPlotly({
 
   p <- plot_ly(data = data, x = ~date, y = ~new_cases, color = ~var, type = 'bar') %>%
     layout(
-      yaxis = list(title = "# New Cases"),
-      xaxis = list(title = "Date")
+      yaxis = list(title = "\u0053\u1ed1\u0020\u0063\u0061"),
+      xaxis = list(title = "\u004e\u0067\u00e0\u0079")
     )
 })

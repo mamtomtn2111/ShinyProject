@@ -66,8 +66,8 @@ output$case_evolution_byCountry <- renderPlotly({
     add_trace(data = data$confirmed[which(data$confirmed$`Country/Region` == input$caseEvolution_country[1]),],
       x            = ~date, y = -100, line = list(color = 'rgb(0, 0, 0)', dash = 'dot'), legendgroup = 'helper', name = "Deceased") %>%
     layout(
-      yaxis = list(title = "# Cases", rangemode = "nonnegative"),
-      xaxis = list(title = "Date")
+      yaxis = list(title = "\u0053\u1ed1\u0020\u0063\u0061", rangemode = "nonnegative"),
+      xaxis = list(title = "\u004e\u0067\u00e0\u0079")
     )
 
   if (input$checkbox_logCaseEvolutionCountry) {
