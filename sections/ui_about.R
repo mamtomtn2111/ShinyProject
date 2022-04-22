@@ -27,7 +27,7 @@ body_about <- dashboardBody(
             "Find more thoughts on this dashboard from Christoph Schoenenberger in this",
             tags$a(href = "https://medium.com/@ch.schoenenberger/covid-19-open-source-dashboard-fa1d2b4cd985",
               "Medium article"), ".",
-            h3("Data"),
+            h3("Data download"),
             tags$ul(
               tags$li(tags$b("COVID-19 data:"), tags$a(href = "https://github.com/CSSEGISandData/COVID-19",
                 "Johns Hopkins CSSE")),
@@ -41,11 +41,14 @@ body_about <- dashboardBody(
             "If you find any bug / issue or have an idea how to improve the dashboard,
             please create an issue on ", tags$a(href = "https://github.com/chschoenenberger/covid19_dashboard/issues",
               "Github"), ". I will try to look into it as soon as possible.",
-            h3("Contribute"),
-            "If you want to add any visualization or further information feel free to create
-            a pull request on ", tags$a(href = "https://github.com/chschoenenberger/covid19_dashboard", "Github"), ".
-            For major rework either fork the repository or create an issue so we can discuss it.",
-            h3("Developers"),
+            h3("Adjust, modify and fix"),
+            "Hello everybody, I'm Nguyen Vu Hai from Vietnam
+            I'm student of Advanced class (CNTT K18 CLC) in Infomation and comunication technology University - Thai Nguyen University.
+            This app was provided a fix in data process and translate some content into Vietnamese, I would be really glad
+            to receive a enhance, improve or opinion from anyone. Please contact me.",
+            tags$a(href = "https://www.facebook.com/hai.nguyenvuhai.2001/", "Facebook"), "|",
+            tags$a(href = "https://github.com/tnvuhai", "Github"), "|",
+            h3("Original source"),
             "Christoph Schoenenberger | Data Scientist @",
             tags$a(href = "https://www.zuehlke.com/ch/en/", "Zuehlke Engineering"), "|",
             tags$a(href = "https://www.linkedin.com/in/cschonenberger/", "LinkedIn"), "|",

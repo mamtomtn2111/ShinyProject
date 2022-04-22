@@ -1,7 +1,7 @@
 output$selectize_casesByCountriesAfter100th <- renderUI({
   selectizeInput(
     "caseEvolution_countryAfter100th",
-    label    = "Select Countries",
+    label    = "\u0043\u0068\u1ecd\u006e\u0020\u0071\u0075\u1ed1\u0063\u0020\u0067\u0069\u0061",
     choices  = unique(data_evolution$`Country/Region`),
     selected = top5_countries,
     multiple = TRUE
@@ -11,8 +11,8 @@ output$selectize_casesByCountriesAfter100th <- renderUI({
 output$selectize_casesSince100th <- renderUI({
   selectizeInput(
     "caseEvolution_var100th",
-    label    = "Select Variable",
-    choices  = list("Confirmed" = "confirmed", "Deceased" = "deceased"),
+    label    = "\u0043\u0068\u1ecd\u006e\u0020\u0074\u0068\u0061\u006d\u0020\u0073\u1ed1",
+    choices  = list("Confirmed" = "confirmed", "Decreased" = "deceased"),
     multiple = FALSE
   )
 })
@@ -36,13 +36,13 @@ output$case_evolution_after100 <- renderPlotly({
 
   if (input$caseEvolution_var100th == "confirmed") {
     p <- layout(p,
-      yaxis = list(title = "# Confirmed cases"),
-      xaxis = list(title = "# Days since 100th confirmed case")
+      yaxis = list(title = "\u0053\u1ed1\u0020\u0063\u0061\u0020\u006e\u0068\u0069\u1ec5\u006d\u000d"),
+      xaxis = list(title = "\u0053\u1ed1\u0020\u006e\u0067\u00e0\u0079\u0020\u006b\u1ec3\u0020\u0074\u1eeb\u0020\u0063\u0061\u0020\u006e\u0068\u0069\u1ec5\u006d\u0020\u0074\u0068\u1ee9\u0020\u0031\u0030\u0030\u000d")
     )
   } else {
     p <- layout(p,
-      yaxis = list(title = "# Deceased cases"),
-      xaxis = list(title = "# Days since 10th deceased case")
+      yaxis = list(title = "\u0053\u1ed1\u0020\u0063\u0061\u0020\u0074\u1eed\u0020\u0076\u006f\u006e\u0067\u000d"),
+      xaxis = list(title = "\u0053\u1ed1\u0020\u006e\u0067\u00e0\u0079\u0020\u006b\u1ec3\u0020\u0074\u1eeb\u0020\u006e\u0067\u00e0\u0079\u0020\u0063\u00f3\u0020\u0063\u0061\u0020\u0074\u1eed\u0020\u0076\u006f\u006e\u0067\u0020\u0074\u0068\u1ee9\u0020\u0031\u0030")
     )
   }
   if (input$checkbox_logCaseEvolution100th) {

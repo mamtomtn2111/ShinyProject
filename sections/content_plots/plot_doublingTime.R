@@ -1,7 +1,7 @@
 output$selectize_doublingTime_Country <- renderUI({
   selectizeInput(
     "selectize_doublingTime_Country",
-    label    = "Select Countries",
+    label    = "\u0043\u0068\u1ecd\u006e\u0020\u0071\u0075\u1ed1\u0063\u0020\u0067\u0069\u0061",
     choices  = unique(data_evolution$`Country/Region`),
     selected = top5_countries,
     multiple = TRUE
@@ -11,7 +11,7 @@ output$selectize_doublingTime_Country <- renderUI({
 output$selectize_doublingTime_Variable <- renderUI({
   selectizeInput(
     "selectize_doublingTime_Variable",
-    label    = "Select Variable",
+    label    = "\u0043\u0068\u1ecd\u006e\u0020\u0074\u0068\u0061\u006d\u0020\u0073\u1ed1",
     choices  = list("Confirmed" = "doublingTimeConfirmed", "Deceased" = "doublingTimeDeceased"),
     multiple = FALSE
   )
