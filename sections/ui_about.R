@@ -17,11 +17,6 @@ body_about <- dashboardBody(
             tags$a(href = "https://coronavirus.jhu.edu/map.html", "Johns Hopkins COVID-19"), ") is styled rather
             alarmist. Therefore, a more neutral dashboard might help to dampen the already
             existing hysteria a little.",
-            h4("Why Open Source?"),
-            "My hope is that this dashboard can help researchers around the world to get a
-            better overview of the current situation concerning the COVID-19 idea. I hereby
-            invite all of you to contribute to this project with additional visualizations,
-            information etc.",
             tags$br(),
             tags$br(),
             "Find more thoughts on this dashboard from Christoph Schoenenberger in this",
@@ -37,23 +32,22 @@ body_about <- dashboardBody(
             HTML("<b>Note</b>: Johns Hopkins is not updating their data on recovered cases anymore for various
             countries. Therefore, this data is estimated as <i>(Confirmed at current date - 14 days) - deceased at
             current date)</i>, wherever no real data is available."),
-            h3("Bugs, Issues & Enhancement Requests"),
-            "If you find any bug / issue or have an idea how to improve the dashboard,
-            please create an issue on ", tags$a(href = "https://github.com/chschoenenberger/covid19_dashboard/issues",
-              "Github"), ". I will try to look into it as soon as possible.",
             h3("Adjust, modify and fix"),
             "Hello everybody, I'm Nguyen Vu Hai from Vietnam
-            I'm student of Advanced class (CNTT K18 CLC) in Infomation and comunication technology University - Thai Nguyen University.
-            This app was provided a fix in data process and translate some content into Vietnamese, I would be really glad
-            to receive a enhance, improve or opinion from anyone. Please contact me.",
+            I'm student of Advanced class (CNTT K18 CLC) in Infomation and comunication technology University - Thai Nguyen 
+            University. This app was provided a fix in data process and translate some content into Vietnamese, I would be 
+            really glad to receive a enhance, improve or opinion from anyone. Please contact me.",
             tags$a(href = "https://www.facebook.com/hai.nguyenvuhai.2001/", "Facebook"), "|",
             tags$a(href = "https://github.com/tnvuhai", "Github"), "|",
-            h3("Original source"),
+            h3("Author source"),
             "Christoph Schoenenberger | Data Scientist @",
             tags$a(href = "https://www.zuehlke.com/ch/en/", "Zuehlke Engineering"), "|",
             tags$a(href = "https://www.linkedin.com/in/cschonenberger/", "LinkedIn"), "|",
             tags$a(href = "https://twitter.com/ChSchonenberger", "Twitter"), "|",
-            tags$a(href = "https://github.com/chschoenenberger/", "Github"),
+            tags$a(href = "https://github.com/chschoenenberger/", "Github"),tags$br(),
+            "If you find any bug / issue or have an idea how to improve the dashboard,
+            please create an issue on ", tags$a(href = "https://github.com/chschoenenberger/covid19_dashboard/issues",
+              "Github"), ". I will try to look into it as soon as possible.",
             width = 12,
             style = "padding-left: 20px; padding-right: 20px; padding-bottom: 40px; margin-top: -15px;"
           ),
