@@ -23,6 +23,10 @@ ui <- fluidPage(
     tabPanel("Biểu đồ", page_plots, value = "page-plots"),
     tabPanel("Về chúng tôi", page_about, value = "page-about"),
     tags$script(HTML("var header = $('.navbar > .container-fluid');
+    header.append('<div style=\"float:right\"><a target=\"_blank\" href=\"https://ictu.edu.vn\"><img src=\"Logo_ICTU.png\" alt=\"alt\" style=\"float:right;width:33px;padding-top:10px;margin-top:-50px;margin-right:60px\"> </a></div>');
+    console.log(header)")
+    ),
+    tags$script(HTML("var header = $('.navbar > .container-fluid');
     header.append('<div style=\"float:right\"><a target=\"_blank\" href=\"https://github.com/tnvuhai/ShinyProject\"><img src=\"logo.png\" alt=\"alt\" style=\"float:right;width:33px;padding-top:10px;margin-top:-50px;margin-right:10px\"> </a></div>');
     console.log(header)")
     )
