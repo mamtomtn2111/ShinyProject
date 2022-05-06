@@ -2,6 +2,7 @@
 
 Kết quả nhóm trực quan dữ liệu covid-19 world bằng Shiny
 Trường đại học công nghệ thông tin và truyền thông Thái Nguyên - Đại học Thái Nguyên
+
 Lớp CNTT K18 CLC - Nguyễn Vũ Hải
 
 # Ảnh minh họa
